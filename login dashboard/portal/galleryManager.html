@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery Manager</title>
+  <link rel="stylesheet" href="gm.css"/>
+</head>
+<body>
+  <header>
+    <div id="user-icon"><button>👤 User</button></div>
+    <h1>Gallery manager</h1>
+    <div id="about">About</div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <p>Recent..</p>
+      <div class="thumbnail" id="thumb1" onclick="selectImage('1.jpg')">🖼️</div>
+      <div class="thumbnail" id="thumb2" onclick="selectImage('2.jpg')">🖼️</div>
+      <button class="thumbnail add" onclick="document.getElementById('fileInput').click()">➕</button>
+
+<input type="file" id="fileInput" >
+    </aside>
+    
+   <main id="viewer">
+  <p id="Ftxt">Select or upload to see image</p>
+  <div id="ctrls" style="position: absolute; color: black; z-index: 99;">
+    <div class="nav">
+      <div id="preBTn" onclick="prevImage()"><i class="fa-solid fa-arrow-left"></i></div>
+      <div id="nxtBTn" onclick="nextImage()" ><i class="fa-solid fa-arrow-right"></i></div>
+      <div id="del" onclick="deleteImage()"><i class="fa-solid fa-trash"></i></div>
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <div class="user-popup" id="userPopup">
+    <h2>USER INFORMATION</h2>
+    <p><strong>Username:</strong> <span id="Username"></span></p>
+    <p><strong>Email:</strong> <span id="Email"></span></p>
+    <p><strong>Photos uploaded:</strong> <span id="photoCount">0</span></p>
+    <button onclick="logout()" class="logout">Log out</button>
+    <button onclick="deleteAll()" class="delete">Delete all</button>
+  </div>
+  <script src="https://kit.fontawesome.com/463701ec2d.js" crossorigin="anonymous"></script>
+  <script src="gm.js"></script>
+</body>
+</html>
