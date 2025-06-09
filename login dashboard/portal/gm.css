@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+}
+header {
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+#user-icon button{
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.4em;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  margin-top: 550px;
+  justify-content: space-evenly;
+    
+}
+#preBTn{
+  position: absolute;
+  margin-right: 800px;
+  cursor: pointer;
+  font-size: 2.3em;
+  
+
+}
+#nxtBTn{
+  position: absolute;
+  margin-left: 800px;
+  cursor: pointer;
+  font-size: 2.3em;
+  
+}
+#del{
+  cursor: pointer;
+  font-size: 2.3em;
+  
+}
+#ctrls{
+  display: none;
+}
+aside {
+  width: 390px;
+  background: #bbbaba;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail {
+  background: #ccc;
+  margin: 10px 0;
+  width:300px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.thumbnail.add {
+  background: #debaba;
+}
+#thumb1 img, #thumb2 img {
+  border: 2px solid white;
+  border-radius: 6px;
+  margin: 10px 0;
+  width:300px;
+  height: 160px;
+}
+
+
+main {
+  flex-grow: 1;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.user-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #9db7ff;
+  padding: 20px;
+  border-radius: 20px;
+  display: none;
+  text-align: center;
+}
+
+.user-popup button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout {
+  background: #000;
+  color: white;
+}
+
+.delete {
+  background: red;
+  color: white;
+}
+#fileInput{
+  display: none;
+}
