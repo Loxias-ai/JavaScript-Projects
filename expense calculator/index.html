@@ -1,0 +1,86 @@
+<!-- SAVE THIS AS index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Expense Tracker</h1>
+    <button id="Deletebtn">Delete All Data</button>
+  </header>
+  
+
+  <div class="app-body" id="app">
+    <div class="left-panel">
+      <select id="dateSelec">
+        <option value="today">Today</option>
+        <option value="yesterday">Yesterday</option>
+        <option value="week">Week</option>
+        <option value="month">Month</option>
+      </select>
+      <h2 id="balance">$00.0</h2>
+      <p style="font-size: 3em; font-weight: bold;">Balance</p>
+      <p>Budget $500.0</p>
+      <button onclick="openModal()">Create New Transaction</button>
+    </div>
+
+    <div id="right-panel">
+      <div class="transactions-header">
+        <h3>Transactions</h3>
+        <select name="Filter" id="filter">
+          <option value="all">Filter</option>
+          <option value="rent">Rent</option>
+          <option value="bills">bills</option>
+          <option value="grocery">grocery</option>
+          <option value="others">other</option>
+        </select>
+      </div>
+
+      <!-- <div class="transaction">
+        <span>➡️ Home Rent</span>
+        <span class="badge">Rent</span>
+        <span class="amount">$500.25</span>
+        <span>Today</span>
+        <div class="btns">
+          <a href="#"><i class="fa-solid fa-pen" id="edit"></i></a>
+          <a href="#"><i class="fa-solid fa-trash" id="trash"></i></a>
+        </div>
+        
+      </div> -->
+      
+
+      <div class="category-summary">
+        <span class="label">Category Expense: $</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Add a transaction</h3>
+      <input type="text" placeholder="Title" id="title" required>
+      <input type="number" placeholder="Amount" id="amount" required/>
+      <select name="" id="date">
+        <option value="Today">Today</option>
+        <option value="yesterday">Yesterday</option>
+        <option value="week">week ago</option>
+        <option value="month">month ago</option>
+      </select>
+      <select id="category">
+        <option value="bills">Bill</option>
+        <option value="rent">Rent</option>
+        <option value="grocery">grocery</option>
+        <option value="others">others</option>
+      </select>
+      <button id="add-trans">Add</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/463701ec2d.js" crossorigin="anonymous"></script>
+</body>
+</html>
+ 
