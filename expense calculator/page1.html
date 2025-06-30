@@ -1,4 +1,4 @@
-<!-- SAVE THIS AS index.html -->
+<!-- SAVE THIS AS page1.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +11,25 @@
   <header>Expense Tracker</header>
 
   <div class="welcome-screen">
-    <button class="create-tab"><a href="index.html">Create New Tab</a></button>
-    <button class="open-existing"><a href="index.html">Open Existing</a></button>
+    <button id="createNew" class="create-tab">Create New Tab</button>
+    <button id="openExisting" class="open-existing">Open Existing</button>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    const createBtn = document.getElementById("createNew");
+    const openBtn = document.getElementById("openExisting");
+
+    createBtn.addEventListener("click", () => {
+      const confirmClear = confirm("This will remove all existing data. Are you sure?");
+      if (confirmClear) {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }
+    });
+
+    openBtn.addEventListener("click", () => {
+      window.location.href = "index.html"; // keep localStorage intact
+    });
+  </script>
 </body>
 </html>
